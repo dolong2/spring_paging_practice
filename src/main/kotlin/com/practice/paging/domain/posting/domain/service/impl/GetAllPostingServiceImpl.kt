@@ -4,9 +4,9 @@ import com.practice.paging.domain.posting.domain.presenation.dto.response.Postin
 import com.practice.paging.domain.posting.domain.presenation.dto.response.PostingResDto
 import com.practice.paging.domain.posting.domain.repository.PostingRepository
 import com.practice.paging.domain.posting.domain.service.GetAllPostingService
+import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.awt.print.Pageable
 
 @Service
 @Transactional(readOnly = true, rollbackFor = [Exception::class])

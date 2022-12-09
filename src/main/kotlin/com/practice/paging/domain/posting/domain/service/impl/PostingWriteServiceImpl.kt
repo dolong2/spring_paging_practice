@@ -5,8 +5,10 @@ import com.practice.paging.domain.posting.domain.presenation.dto.request.Posting
 import com.practice.paging.domain.posting.domain.repository.PostingRepository
 import com.practice.paging.domain.posting.domain.service.PostingWriteService
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
+@Transactional(rollbackFor = [Exception::class])
 class PostingWriteServiceImpl(
     private val postingRepository: PostingRepository,
 ): PostingWriteService{
