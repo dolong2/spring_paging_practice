@@ -4,7 +4,9 @@ import com.practice.paging.domain.posting.domain.entity.Posting
 import com.practice.paging.domain.posting.domain.presenation.dto.request.PostingWriteReqDto
 import com.practice.paging.domain.posting.domain.repository.PostingRepository
 import com.practice.paging.domain.posting.domain.service.PostingWriteService
+import org.springframework.stereotype.Service
 
+@Service
 class PostingWriteServiceImpl(
     private val postingRepository: PostingRepository,
 ): PostingWriteService{
