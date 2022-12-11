@@ -25,7 +25,11 @@ class PostingController(
         return ResponseEntity.ok().build()
     }
 
-    @GetMapping
+    @GetMapping("/page")
     fun getAllPosting(pageable: Pageable): ResponseEntity<PostingListResDto> =
         ResponseEntity.ok(getAllPostingService.execute(pageable))
+
+    @GetMapping
+    fun getAllPosting(): ResponseEntity<PostingListResDto> =
+        ResponseEntity.ok(getAllPostingService.execute())
 }

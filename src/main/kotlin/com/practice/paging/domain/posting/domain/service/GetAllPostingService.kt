@@ -5,4 +5,5 @@ import org.springframework.data.domain.Pageable
 
 interface GetAllPostingService {
     fun execute(pageable: Pageable): PostingListResDto
+    fun execute(): PostingListResDto
 }

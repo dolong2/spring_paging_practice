@@ -19,4 +19,10 @@ class GetAllPostingServiceImpl(
             .map { PostingResDto(it) }
             .content
         )
+
+    override fun execute(): PostingListResDto =
+        PostingListResDto(
+            list = postingRepository.findAll()
+                .map { PostingResDto(it) }
+        )
 }
