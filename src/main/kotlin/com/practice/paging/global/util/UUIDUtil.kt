@@ -4,5 +4,5 @@ import java.util.*
 
 object UUIDUtil {
     fun generateUUID(): String =
-        UUID.randomUUID().toString().split("-")[0]+"-"+ UUID.randomUUID().toString().split("-")[1]
+        UUID.randomUUID().toString().split("-")[0]+"-"+UUID.randomUUID().toString().split("-")[1]
 }

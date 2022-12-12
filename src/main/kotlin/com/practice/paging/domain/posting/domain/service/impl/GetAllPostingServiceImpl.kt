@@ -16,8 +16,8 @@ class GetAllPostingServiceImpl(
     override fun execute(pageable: Pageable): PostingListResDto =
         PostingListResDto(
             list = postingRepository.findAll(pageable)
-            .map { PostingResDto(it) }
-            .content
+                .map { PostingResDto(it) }
+                .content
         )
 
     override fun execute(): PostingListResDto =
